@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-drag-and-drop-lib": [
+        "dist/angular-drag-and-drop-lib"
+      ],
+      "angular-drag-and-drop-lib/*": [
+        "dist/angular-drag-and-drop-lib/*"
+      ]
+    }
   }
 }

@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "angular-drag-and-drop-lib": {
+      "root": "projects/angular-drag-and-drop-lib",
+      "sourceRoot": "projects/angular-drag-and-drop-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-drag-and-drop-lib/tsconfig.lib.json",
+            "project": "projects/angular-drag-and-drop-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-drag-and-drop-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-drag-and-drop-lib/src/test.ts",
+            "tsConfig": "projects/angular-drag-and-drop-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-drag-and-drop-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-drag-and-drop-lib/tsconfig.lib.json",
+              "projects/angular-drag-and-drop-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-drag-and-drop"
