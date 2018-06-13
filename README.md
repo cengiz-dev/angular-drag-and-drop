@@ -8,13 +8,13 @@ A simple drag-and-drop library for Angular.
 
 ## Usage
 
-The `draggable` directive can be used on HTML elements or Angular components. `name` attribute is required on the elements/components marked as `draggable`. Template reference variables of drop areas should be passed into the `dropAreas` input parameter in order to be able to drop draggable into those areas.
+The `draggable` directive can be used on HTML elements or Angular components. `name` attribute is required on the elements/components marked as `draggable`. Template reference variables of drop areas should be passed into the `dropAreas` input parameter of the `draggable` in order for it to be droppable into those areas.
 
     <div draggable [dropAreas]="[myDropArea]" name="myDraggable"></div>
 
     <my-component draggable [dropAreas]="[myDropArea]" name="myComponentDraggable"></my-component>
 
-The `dropArea` component selector can be used on any HTML element. Note that `name` attributes are required for `dropArea` components.
+The `dropArea` component selector can be used on any HTML element. Note that `name` attributes are required for `dropArea` components and each `dropArea` should have a unique `name`.
 
     <div dropArea #myDropArea name="myDropArea"></div>
 
