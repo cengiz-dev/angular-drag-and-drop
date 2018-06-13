@@ -1,0 +1,16 @@
+.draggable-box {
+    background: lavender;
+    padding: 20px;
+}
+
+.drop-area {
+    min-height: 100px;
+    padding: 20px;
+    margin: 20px 0;
+    background: indianred;
+    color: white;
+}
+
+div.title {
+    width: 100%;
+}
