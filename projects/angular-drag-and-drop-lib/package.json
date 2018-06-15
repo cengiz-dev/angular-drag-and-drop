@@ -1,6 +1,13 @@
 {
   "name": "angular-drag-and-drop-lib",
-  "version": "2.0.0",
+  "version": "2.0.1",
+  "license": "MIT",
+  "keywords": [ "angular", "drag", "drop", "draggable" ],
+  "homepage": "https://github.com/cengiz-dev/angular-drag-and-drop",
+  "readme": "https://github.com/cengiz-dev/angular-drag-and-drop/blob/master/README.md",
+  "bugs": {
+    "url" : "https://github.com/cengiz-dev/angular-drag-and-drop/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
