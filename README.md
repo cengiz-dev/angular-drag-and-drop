@@ -23,11 +23,11 @@ In order to access the library directives and components, you'll have to import 
 
 ### Draggable Directive
 
-The `draggable` directive can be used on HTML elements or Angular components. `name` attribute is required on the elements/components marked as `draggable`. Template reference variables of drop areas should be passed into the `dropAreas` input parameter of the `draggable` in order for it to be droppable into those areas.
+The `ngDraggable` directive can be used on HTML elements or Angular components. `name` attribute is required on the elements/components marked as `ngDraggable`. Template reference variables of drop areas should be passed into the `dropAreas` input parameter of the `ngDraggable` in order for it to be droppable into those areas.
 
-    <div draggable [dropAreas]="[myDropArea]" name="myDraggable"></div>
+    <div ngDraggable [dropAreas]="[myDropArea]" name="myDraggable"></div>
 
-    <my-component draggable [dropAreas]="[myDropArea]" name="myComponentDraggable"></my-component>
+    <my-component ngDraggable [dropAreas]="[myDropArea]" name="myComponentDraggable"></my-component>
     
 ### Drop Area Component
 

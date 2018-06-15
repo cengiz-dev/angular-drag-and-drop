@@ -6,7 +6,7 @@ import { DropArea } from '../shared/drop-area.model';
 import { DragOverlayRefWrapper } from '../drag/drag-overlay-ref-wrapper';
 
 @Directive({
-    selector: '[draggable]',
+    selector: '[ngDraggable]',
 })
 export class DraggableDirective implements OnInit, OnDestroy, Draggable {
     @Input('name') draggableId: string;
