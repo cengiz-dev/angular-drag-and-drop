@@ -1,6 +1,12 @@
 .draggable-box {
+    width: 250px;
     background: lavender;
     padding: 20px;
+    margin: 20px;
+}
+
+.draggable-component {
+    margin: 20px;
 }
 
 .drop-area {

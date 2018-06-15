@@ -1,4 +1,5 @@
 .box {
+    width: 250px;
     padding: 20px;
     background-color: teal;
     color: white;

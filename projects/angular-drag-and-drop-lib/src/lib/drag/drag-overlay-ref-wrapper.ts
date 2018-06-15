@@ -40,24 +40,20 @@ export class DragOverlayRefWrapper {
         };
     }
 
+    private attachClone(element: HTMLElement) {
+        let deepClone = element.cloneNode(true) as HTMLElement;
+        deepClone.style.margin = '0';
+        this.attach(deepClone);
+    }
+
     display(draggedElement: HTMLElement, pointerX: number, pointerY: number): void {
         if (!this.hasAttached()) {
-            let deepClone = draggedElement.cloneNode(true);
-            this.attach(deepClone);
-
-            let marginLeft = parseInt(window.getComputedStyle(draggedElement).marginLeft),
-                marginTop = parseInt(window.getComputedStyle(draggedElement).marginTop);
-
-            console.log('top: ', marginTop);
-            console.log('left: ', marginLeft);
-
-            marginLeft = marginLeft === NaN ? 0 : marginLeft;
-            marginTop = marginTop === NaN ? 0 : marginTop;
+            this.attachClone(draggedElement);
 
             const dragRect = draggedElement.getBoundingClientRect();
             this.originalDragElementPosition = {
-                x: dragRect.left - marginLeft,
-                y: dragRect.top - marginTop,
+                x: dragRect.left,
+                y: dragRect.top,
             };
 
             this.positionStrategy.left(`${dragRect.left - this.originalOverlayPosition.x}px`);
